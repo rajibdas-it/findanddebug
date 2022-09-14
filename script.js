@@ -84,10 +84,12 @@ const gameOver = () => {
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
-    <h1>Finished!</h1>
-    <p>You took: <span class="bold">${Math.round(timeTaken)}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-    <button onclick="closeModal()">Close</button>
+    <h1 style="margin-bottom: 15px; margin-top: 10px;">Finished!</h1>
+    <p style="margin-bottom: 15px ;">You took: <span class="bold">${Math.round(
+      timeTaken
+    )}</span> seconds</p>
+    <p style="margin-bottom: 25px;">You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <button class="modal-close" onclick="closeModal()">Close</button>
   `;
 
   addHistory(questionText, timeTaken, errorCount);
