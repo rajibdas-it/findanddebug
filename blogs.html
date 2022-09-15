@@ -9,6 +9,15 @@
       href="/assests/pn_fav-3.png"
       type="image/x-icon"
     />
+    <title>Speed Monster</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,64 +26,26 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img
-              class="w-50 ms-sm-5 ms-md-5 ms-lg-5"
-              src="assests/pocket_news.png"
-              alt=""
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse me-sm-5 me-md-5 me-lg-5"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active me-2"
-                  aria-current="page"
-                  href="index.html"
-                  >News</a
-                >
-              </li>
-              <li class="nav-item me-2">
-                <a class="nav-link" href="blog.html">Bolgs</a>
-              </li>
-            </ul>
-            <img
-              style="width: 50px; height: 50px"
-              src="/assests/rajib_pic.jpg"
-              class="img-fluid rounded-circle"
-              alt=""
-            />
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="mt-5">
+    <h1 class="title"><img src="./logo.png" /></h1>
+    <!-- border-2 border-bottom border-success -->
+    <div class="buttons">
+      <ul class="buttons" style="width: 80%">
+        <a class="menu-item text-decoration-none" href="index.html">Home</a>
+        <a class="menu-item text-decoration-none" href="blogs.html">Blogs</a>
+      </ul>
+    </div>
+    <main class="mt-2 mb-4">
       <section class="container mt-5">
-        <div class="fqa text-center">
-          <h1 class="fw-bold">JavaScript Basic BLOGS</h1>
-          <p class="text-dark text-opacity-50">
+        <div class="text-center">
+          <h1  class="fw-bold text-white">JavaScript BLOGS</h1>
+        
+          <p class="text-white text-opacity-50">
             As a student, you will find it helpful for better concentration and
             memory
           </p>
         </div>
 
-        <div class="w-75 m-auto mt-3 mt-md-5 mt-lg-5">
+        <div class=" mt-3 mt-md-5 mt-lg-5">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -86,7 +57,7 @@
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                  <span class="fw-bold fs-4">What are the difference between Var, Let and Const?</span>
+                  <span >What are the difference between Local Storage and Session Storage?</span>
                 </button>
               </h2>
               <div
@@ -96,21 +67,20 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  In JavaScript, users can declare a variable using 3 keywords
-                  that are <strong>var, let, and const</strong>. <br />
-                  <strong>Var:</strong> The var is the oldest keyword to declare
-                  a variable in JavaScript. The scope of a var variable is
-                  functional scope. It can be updated and re-declared into the
-                  scope. It can be declared without initialization. <br />
-                  <strong>Let:</strong> The let keyword is an improved version
-                  of the var keyword. The scope of a let variable is block
-                  scope. It can be updated but cannot be re-declared into the
-                  scope. It can be declared without initialization. <br />
-                  <strong>Const:</strong> The const keyword has all the
-                  properties that are the same as the let keyword, except the
-                  user cannot update it. The scope of a const variable is block
-                  scope. It cannot be updated or re-declared into the scope. It
-                  cannot be declared without initialization.
+                  <strong class="fs-6">localStorage:</strong> <br>
+                  <strong>1.</strong> The localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions. <br>
+                  <strong>2.</strong> A Storage object which can be used to access the current origin's local storage space. <br>
+                  <strong>3.</strong> As it is not session-based, it must be deleted via javascript or manually. <br>
+                  <strong>4.</strong> The storage capacity of local storage is 5MB/10MB <br>
+                  <strong>5.</strong> There is no transfer of data to the server. <br>
+                  <br>
+                  <strong class="fs-6">sessionStorage:</strong> <br>
+                  <strong>1.</strong> It’s session-based and works per window or tab. This means that data is stored only for the duration of a session until the browser (or tab) is closed. <br>
+                  <strong>2.</strong> A Storage object which can be used to access the current origin's session storage space. <br>
+                  <strong>3.</strong> Session Storage data is cleared when the page session ends. <br>
+                  <strong>4.</strong> The storage capacity of session storage is 5MB. <br>
+                  <strong>5.</strong> There is no transfer of data to the server. <br>
+                  <br>
                 </div>
               </div>
             </div>
@@ -123,8 +93,7 @@
                   data-bs-target="#collapseTwo"
                   aria-expanded="false"
                   aria-controls="collapseTwo"
-                > <span class="fw-bold fs-4">What are the difference between Arrow function and Regular
-                    function?</span>
+                > <span>What are the difference between Global Scope and Local Scope?</span>
                   
                 </button>
               </h2>
@@ -135,37 +104,18 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  In JavaScript, Function can be declared in different ways.
-                  JavaScript's arrow functions might seem the same as regular
-                  functions on the surface, but they have some very important
-                  differences: <br />
-                  <strong>Syntactical differences:</strong> <br />The first and
-                  most obvious difference between arrow functions and regular
-                  functions is their syntax. Not only do they look different,
-                  but arrow functions also provide an implicit return shorthand
-                  and allow parenthesis around a single argument to be omitted.
+                  In programming, the scope is defined as the accessibility of the variable. Each variable in JavaScript has its own scope.
+                  In JavaScript, there are 3 types of variable scope, namely: <br>
+                    1. Global Scope <br>
+                    2. Function Scope <br>
+                    3. Block Scope <br>
+                    Although, there used to be only two types of scopes before ES6, the global scope, and the local scope. But, with ES6 local scope was broken down into function scope and block scope. <br>
+                  <br>
+                    <strong class="fs-6">Global Scope:</strong> The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.
                   <br /><br />
-                  <strong>this value (execution context):</strong> <br />
-                  Inside a regular function, execution context (i.e. the value
-                  of this) is dynamic. This means that the value of this depends
-                  on how the function was invoked (simple invocation, method
-                  invocation, indirect invocation or constructor invocation). On
-                  the other hand, an arrow function does not define its own
-                  execution context. This results in an arrow function's this
-                  being resolved lexically (i.e. the scope in which the arrow
-                  function was defined). <br />
+                  <strong class="fs-6">Block Scope:</strong> Block scope is a sub-type of local scope. A variable when declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop. To be consise the variables declared inside the curly braces are called as within block scope. <br>
+                  In JavaScript, a block is denoted by curly braces. A variable declared with var in a block scope is available outside of that block scope. Variables declared with let inside a block scope are only accessible inside that scope.
                   <br />
-                  <strong>Methods</strong> Due to arrow functions not defining
-                  their own execution context, they're not well-suited for usage
-                  as methods. However, thanks to the Class fields proposal,
-                  arrow functions can be used as methods inside classes, if your
-                  environment supports it. <br />
-                  <br />
-                  <strong>Constructors</strong> Regular functions can be used as
-                  constructors, using the new keyword. Yet another consequence
-                  of the lexical resolution of this inside arrow functions is
-                  that they cannot be used as constructors. Using new with an
-                  arrow function results in a TypeError.
                 </div>
                 <br />
                 <br />
@@ -180,7 +130,7 @@
                   data-bs-target="#collapseThree"
                   aria-expanded="false"
                   aria-controls="collapseThree"
-                > <span class="fw-bold fs-4">What are the difference between Map, forEach, Filter and Find?</span>
+                > <span>How does Event Loop Work?</span>
                   
                 </button>
               </h2>
@@ -191,10 +141,15 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <strong>Map: </strong>The map() method loops through each element in array and calls the provided function for each element. This method creates a new array and doesn’t alter the original array. <br>
-                  <strong>forEach: </strong> forEach() is used to execute the same code on every element in an array but does not change the array and it returns undefined.<br>
-                  <strong>Filter: </strong> The filter() method in JavaScript creates a new array with the elements that satisfies the provided condition. This method calls a provided function for each element in array and verifies the condition given in the provided function and passes only those elements that satisfy the given condition. <br>
-                  <strong>Find: </strong> find() method to find the first element of an array that satisfies a provided testing function.
+                  JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.
+                  <br>The <strong>event loop</strong> allows js to perform non-blocking I/O operations despite the fact that JavaScript is single-threaded.
+                  Event loop is an endless loop, which waits for tasks, executes them and then sleeps until it receives more tasks.
+                  The event loop executes tasks from the event queue only when the call stack is empty i.e. there is no ongoing task.
+                  The event loop allows us to use callbacks and promises.
+                  The event loop executes the tasks starting from the oldest first.
+                  <br>
+                  When the timer set by setTimeout function (in this case 1000 ms) runs out, the callback is sent to the event queue. The event loop on finding the call stack empty takes the task at the top of the event queue and sends it to the call stack. The callback function for setTimeout function runs the instruction and “This is the second statement” is logged on the console and the task is popped from the stack.
+
               </div>
             </div>
             <div class="accordion-item">
@@ -207,7 +162,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFour"
                 >
-                <span class="fw-bold fs-4">Why do we use template string?</span>
+                <span>How many ways in Javascript to get undefined value?</span>
                   
                 </button>
               </h2>
@@ -218,44 +173,22 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                    <strong>1.</strong> A single set of back ticks <strong>(` `)</strong> to enclose the entire line. <br>
-                    <strong>2.</strong> Direct interpolation of a variable, in place in the string. <br>
-                    <strong>3.</strong> The ability to write multiple lines in a single string.
+                    <strong>Undefined</strong> is also a primitive value in JavaScript. A variable or an object has an undefined value when no value is assigned before using it. So you can say that undefined means lack of value or unknown value. Some reason of retrun undefined is given below: <br>
+                    <strong>1.</strong> When you declare a variable and don’t initialize it to a value, the variable will have a value of undefined.<br>
+                    <strong>2.</strong> You will get undefined value when you call a non-existent property or method of an object.<br>
+                    <strong>3.</strong> If you pass less arguments in function call then, that parameter will have undefined value. <br>
+                    <strong>4.</strong> An undefined evaluates to false when used in conditional expression. <br>
+                    <strong>5.</strong> A function that doesn’t have a return statement implicitly returns undefined. <br>
+                    <strong>6.</strong> Accessing a out-of-bounds array element returns undefined. <br>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </section>
     </main>
-    <footer class="container-fluid mt-5 bg-dark text-white text-opacity-75 text-center p-5">
-      <img class="img-fluid" src="./assests/pocket_news.png" alt="" />
-      <p>Office- 9/3, Gulshan, Dhaka-1212.</p>
-      <p>Privacy Policy | Terms of use</p>
-      <div class="social-media-icon">
-        <a
-          class="text-decoration-none me-4 text-info social-icon fs-5"
-          href="https://www.facebook.com/rajibrad/"
-          target="_blank"
-        >
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a
-          class="text-decoration-none me-4 text-info social-icon fs-5"
-          href="https://twitter.com/Rajibrad"
-          target="_blank"
-        >
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a
-          class="text-decoration-none fw-bold text-info social-icon fs-5"
-          href="https://www.linkedin.com/in/rajib-das-a032a7a7/"
-          target="_blank"
-        >
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
-    </footer>
+   
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

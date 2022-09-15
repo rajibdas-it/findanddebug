@@ -157,6 +157,11 @@ button {
   border: 2px solid #9dffad;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
+}
+.menu-item:hover {
+  color: #0a58ca;
+  font-size: bold;
 }
 .buttons > li {
   list-style-type: none;
